@@ -1,0 +1,656 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Warm Object</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="{% static 'style/style.css' %}" rel="stylesheet">
+
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="row">
+                <div class="card col-2">
+                    <button>Корзина ( 0 )</button>
+                </div>
+                <div class="col-2"></div>
+                <div class="logo col-4">
+                    <p>Warm Objects</p>
+                </div>
+                <div class="col-2"></div>
+                <div class="theme col-2">
+                    <div class="square brown">
+                        <span></span>
+                    </div>
+                    <div class="square white">
+                        <span></span>
+                    </div>
+                    <div class="square green">
+                        <span></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+        <div class="container product">
+            <div class="row">
+                {% for product in products %}
+                <div class="col-3">
+                    <div class="product-card">
+                        <div class="product-img">
+                            {% if product.image %}
+                            <img src="{{ product.image.url }}" alt="{{ product.name }}">
+                        {% endif %}
+                        </div>
+                        <div class="product-info">
+                            <div class="price">
+                                <p>{{ product.price }} €</p>
+                            </div>
+                            <div class="info">
+                                <p class="material">
+                                    Керамика
+                                </p>
+                                <p class="amount">
+                                    200 ml
+                                </p>
+                                <button>В корзину</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+                <div class="col-3">
+                     <div class="product-card">
+                        <div class="product-img">
+                            <img src="img/2.png" />
+                        </div>
+                        <div class="product-info">
+                            <div class="price">
+                                <p>1200 P</p>
+                            </div>
+                            <div class="info">
+                                <p class="material">
+                                    =
+                                </p>
+                                <p class="amount">
+                              
+                                </p>
+                                <button>В корзину</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-3">
+                    <div class="product-card">
+                        <div class="product-img">
+                            <img src="img/3.png" />
+                        </div>
+                        <div class="product-info">
+                            <div class="price">
+                                <p>1200 P</p>
+                            </div>
+                            <div class="info">
+                                <p class="material">
+                                    Керамика
+                                </p>
+                                <p class="amount">
+                                    200 ml
+                                </p>
+                                <button>В корзину</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-3">
+                    <div class="product-card">
+                        <div class="product-img">
+                            <img src="img/4.png" />
+                        </div>
+                        <div class="product-info">
+                            <div class="price">
+                                <p>1200 P</p>
+                            </div>
+                            <div class="info">
+                                <p class="material">
+                                    Керамика
+                                </p>
+                                <p class="amount">
+                                    200 ml
+                                </p>
+                                <button>В корзину</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-3">
+                    <div class="product-card">
+                        <div class="product-img">
+                            <img src="img/5.png" />
+                        </div>
+                        <div class="product-info">
+                            <div class="price">
+                                <p>1200 P</p>
+                            </div>
+                            <div class="info">
+                                <p class="material">
+                                    Керамика
+                                </p>
+                                <p class="amount">
+                                    200 ml
+                                </p>
+                                <button>В корзину</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-3">
+                     <div class="product-card">
+                        <div class="product-img">
+                            <img src="img/6.png" />
+                        </div>
+                        <div class="product-info">
+                            <div class="price">
+                                <p>1200 P</p>
+                            </div>
+                            <div class="info">
+                                <p class="material">
+                                    Керамика
+                                </p>
+                                <p class="amount">
+                                    200 ml
+                                </p>
+                                <button>В корзину</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-3">
+                    <div class="product-card">
+                        <div class="product-img">
+                            <img src="img/7.png" />
+                        </div>
+                        <div class="product-info">
+                            <div class="price">
+                                <p>1200 P</p>
+                            </div>
+                            <div class="info">
+                                <p class="material">
+                                    Керамика
+                                </p>
+                                <p class="amount">
+                                    200 ml
+                                </p>
+                                <button>В корзину</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-3">
+                    <div class="product-card">
+                        <div class="product-img">
+                            <img src="img/8.png" />
+                        </div>
+                        <div class="product-info">
+                            <div class="price">
+                                <p>1200 P</p>
+                            </div>
+                            <div class="info">
+                                <p class="material">
+                                    Керамика
+                                </p>
+                                <p class="amount">
+                                    200 ml
+                                </p>
+                                <button>В корзину</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-3">
+                    <div class="product-card">
+                        <div class="product-img">
+                            <img src="img/9.png" />
+                        </div>
+                        <div class="product-info">
+                            <div class="price">
+                                <p>1200 P</p>
+                            </div>
+                            <div class="info">
+                                <p class="material">
+                                    Керамика
+                                </p>
+                                <p class="amount">
+                                    200 ml
+                                </p>
+                                <button>В корзину</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-3">
+                     <div class="product-card">
+                        <div class="product-img">
+                            <img src="img/10.png" />
+                        </div>
+                        <div class="product-info">
+                            <div class="price">
+                                <p>1200 P</p>
+                            </div>
+                            <div class="info">
+                                <p class="material">
+                                    Керамика
+                                </p>
+                                <p class="amount">
+                                    200 ml
+                                </p>
+                                <button>В корзину</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-3">
+                    <div class="product-card">
+                        <div class="product-img">
+                            <img src="img/11.png" />
+                        </div>
+                        <div class="product-info">
+                            <div class="price">
+                                <p>1200 P</p>
+                            </div>
+                            <div class="info">
+                                <p class="material">
+                                    Керамика
+                                </p>
+                                <p class="amount">
+                                    200 ml
+                                </p>
+                                <button>В корзину</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-3">
+                    <div class="product-card">
+                        <div class="product-img">
+                            <img src="img/12.png" />
+                        </div>
+                        <div class="product-info">
+                            <div class="price">
+                                <p>1200 P</p>
+                            </div>
+                            <div class="info">
+                                <p class="material">
+                                    Керамика
+                                </p>
+                                <p class="amount">
+                                    200 ml
+                                </p>
+                                <button>В корзину</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-3">
+                    <div class="product-card">
+                        <div class="product-img">
+                            <img src="img/13.png" />
+                        </div>
+                        <div class="product-info">
+                            <div class="price">
+                                <p>1200 P</p>
+                            </div>
+                            <div class="info">
+                                <p class="material">
+                                    Керамика
+                                </p>
+                                <p class="amount">
+                                    200 ml
+                                </p>
+                                <button>В корзину</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-3">
+                     <div class="product-card">
+                        <div class="product-img">
+                            <img src="img/14.png" />
+                        </div>
+                        <div class="product-info">
+                            <div class="price">
+                                <p>1200 P</p>
+                            </div>
+                            <div class="info">
+                                <p class="material">
+                                    Керамика
+                                </p>
+                                <p class="amount">
+                                    200 ml
+                                </p>
+                                <button>В корзину</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-3">
+                    <div class="product-card">
+                        <div class="product-img">
+                            <img src="img/15.png" />
+                        </div>
+                        <div class="product-info">
+                            <div class="price">
+                                <p>1200 P</p>
+                            </div>
+                            <div class="info">
+                                <p class="material">
+                                    Керамика
+                                </p>
+                                <p class="amount">
+                                    200 ml
+                                </p>
+                                <button>В корзину</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-3">
+                    <div class="product-card">
+                        <div class="product-img">
+                            <img src="img/16.png" />
+                        </div>
+                        <div class="product-info">
+                            <div class="price">
+                                <p>1200 P</p>
+                            </div>
+                            <div class="info">
+                                <p class="material">
+                                    Керамика
+                                </p>
+                                <p class="amount">
+                                    200 ml
+                                </p>
+                                <button>В корзину</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-3">
+                    <div class="product-card">
+                        <div class="product-img">
+                            <img src="img/17.png" />
+                        </div>
+                        <div class="product-info">
+                            <div class="price">
+                                <p>1200 P</p>
+                            </div>
+                            <div class="info">
+                                <p class="material">
+                                    Керамика
+                                </p>
+                                <p class="amount">
+                                    200 ml
+                                </p>
+                                <button>В корзину</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-3">
+                     <div class="product-card">
+                        <div class="product-img">
+                            <img src="img/18.png" />
+                        </div>
+                        <div class="product-info">
+                            <div class="price">
+                                <p>1200 P</p>
+                            </div>
+                            <div class="info">
+                                <p class="material">
+                                    Керамика
+                                </p>
+                                <p class="amount">
+                                    200 ml
+                                </p>
+                                <button>В корзину</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-3">
+                    <div class="product-card">
+                        <div class="product-img">
+                            <img src="img/19.png" />
+                        </div>
+                        <div class="product-info">
+                            <div class="price">
+                                <p>1200 P</p>
+                            </div>
+                            <div class="info">
+                                <p class="material">
+                                    Керамика
+                                </p>
+                                <p class="amount">
+                                    200 ml
+                                </p>
+                                <button>В корзину</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-3">
+                    <div class="product-card">
+                        <div class="product-img">
+                            <img src="img/20.png" />
+                        </div>
+                        <div class="product-info">
+                            <div class="price">
+                                <p>1200 P</p>
+                            </div>
+                            <div class="info">
+                                <p class="material">
+                                    Керамика
+                                </p>
+                                <p class="amount">
+                                    200 ml
+                                </p>
+                                <button>В корзину</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-3">
+                    <div class="product-card">
+                        <div class="product-img">
+                            <img src="img/21.png" />
+                        </div>
+                        <div class="product-info">
+                            <div class="price">
+                                <p>1200 P</p>
+                            </div>
+                            <div class="info">
+                                <p class="material">
+                                    Керамика
+                                </p>
+                                <p class="amount">
+                                    200 ml
+                                </p>
+                                <button>В корзину</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-3">
+                     <div class="product-card">
+                        <div class="product-img">
+                            <img src="img/22.png" />
+                        </div>
+                        <div class="product-info">
+                            <div class="price">
+                                <p>1200 P</p>
+                            </div>
+                            <div class="info">
+                                <p class="material">
+                                    Керамика
+                                </p>
+                                <p class="amount">
+                                    200 ml
+                                </p>
+                                <button>В корзину</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-3">
+                    <div class="product-card">
+                        <div class="product-img">
+                            <img src="img/23.png" />
+                        </div>
+                        <div class="product-info">
+                            <div class="price">
+                                <p>1200 P</p>
+                            </div>
+                            <div class="info">
+                                <p class="material">
+                                    Керамика
+                                </p>
+                                <p class="amount">
+                                    200 ml
+                                </p>
+                                <button>В корзину</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-3">
+                    <div class="product-card">
+                        <div class="product-img">
+                            <img src="img/24.png" />
+                        </div>
+                        <div class="product-info">
+                            <div class="price">
+                                <p>1200 P</p>
+                            </div>
+                            <div class="info">
+                                <p class="material">
+                                    Керамика
+                                </p>
+                                <p class="amount">
+                                    200 ml
+                                </p>
+                                <button>В корзину</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-3">
+                    <div class="product-card">
+                        <div class="product-img">
+                            <img src="img/25.png" />
+                        </div>
+                        <div class="product-info">
+                            <div class="price">
+                                <p>1200 P</p>
+                            </div>
+                            <div class="info">
+                                <p class="material">
+                                    Керамика
+                                </p>
+                                <p class="amount">
+                                    200 ml
+                                </p>
+                                <button>В корзину</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-3">
+                     <div class="product-card">
+                        <div class="product-img">
+                            <img src="img/26.png" />
+                        </div>
+                        <div class="product-info">
+                            <div class="price">
+                                <p>1200 P</p>
+                            </div>
+                            <div class="info">
+                                <p class="material">
+                                    Керамика
+                                </p>
+                                <p class="amount">
+                                    200 ml
+                                </p>
+                                <button>В корзину</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-3" style="display: none;">
+                    <div class="product-card">
+                        <div class="product-img">
+                            <img src="img/23.png" />
+                        </div>
+                        <div class="product-info">
+                            <div class="price">
+                                <p>1200 P</p>
+                            </div>
+                            <div class="info">
+                                <p class="material">
+                                    Керамика
+                                </p>
+                                <p class="amount">
+                                    200 ml
+                                </p>
+                                <button>В корзину</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-3" style="display: none;">
+                    <div class="product-card">
+                        <div class="product-img">
+                            <img src="img/24.png" />
+                        </div>
+                        <div class="product-info">
+                            <div class="price">
+                                <p>1200 P</p>
+                            </div>
+                            <div class="info">
+                                <p class="material">
+                                    Керамика
+                                </p>
+                                <p class="amount">
+                                    200 ml
+                                </p>
+                                <button>В корзину</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script>
+            document.querySelectorAll('.square').forEach(square => {
+                square.addEventListener('click', () => {
+                    const color = getComputedStyle(square).backgroundColor;
+                    document.body.style.transition = 'background-color 0.5s ease';
+                    document.body.style.backgroundColor = color;
+                });
+            });
+        </script>
+</body>
+</html>
